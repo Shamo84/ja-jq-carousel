@@ -7,6 +7,22 @@ $(document).ready(function() {
   $(".fa-angle-right").click(function() {
     nextImage();
   });
+
+// TASTI DIREZIONALI
+  $(document).keydown(function() {
+    if (event.keyCode == 39) {
+      nextImage();
+    } else if (event.keyCode == 37) {
+      prevImage();
+    }
+  });
+
+  // CLICK SUI PALLINI
+  $(".nav > i").click(function() {
+    removeClassActive();
+    $(this).addClass("active");
+    $(".images img").eq($(this).index()).addClass("active");
+  });
 });
 // SEZIONE FUNZIONI
 function prevImage() {

@@ -7,7 +7,17 @@ $(document).ready(function() {
   $(".fa-angle-right").click(function() {
     nextImage();
   });
+
+// TASTI DIREZIONALI
+  $(document).keydown(function() {
+    if (event.keyCode == 39) {
+      nextImage();
+    } else if (event.keyCode == 37) {
+      prevImage();
+    }
+  });
 });
+
 // SEZIONE FUNZIONI
 function prevImage() {
   removeClassActive();
