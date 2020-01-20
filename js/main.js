@@ -1,4 +1,5 @@
 $(document).ready(function() {
+
 // CLICK SULLE FRECCE
   $(".fa-angle-left").click(function() {
     prevImage();
@@ -23,7 +24,6 @@ $(document).ready(function() {
     $(".images img").eq($(this).index()).addClass("active");
   });
 });
-
 // SEZIONE FUNZIONI
 function prevImage() {
   removeClassActive();
