@@ -26,21 +26,7 @@ $(document).ready(function() {
   $(".nav > i").click(function() {
     removeClassActive();
     $(this).addClass("active");
-    switch ($(this).index()) {
-      case 0:
-        img1.addClass("active");
-        break;
-      case 1:
-        img2.addClass("active");
-        break;
-      case 2:
-        img3.addClass("active");
-        break;
-      case 3:
-        img4.addClass("active");
-        break;
-      default:
-    }
+    $(".images img").eq($(this).index()).addClass("active");
   });
 
   // SEZIONE FUNZIONI
